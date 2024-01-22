@@ -1,38 +1,11 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <video id="video" src="https://assets.allsamplefiles.com/mp4/ns/60s/sample-file-quad-hd.mp4" width="320" height="240" controls></video>
-    <canvas id="canvas" width="320" height="240"></canvas>
-    <button id="addtocanvas">Add still to canvas</button>
-    <button id="capture">Extract data uri</button>
-    <img id="output" style="border: 2px solid red;">
-
     <a href="microsoft-edge-x://copilot?followupAction=showPurchase">microsoft-edge-x://copilot?followupAction=showPurchase</a>
-    <iframe src="microsoft-edge-x://action/copilot?followupAction=showPurchase">microsoft-edge-x://action/copilot?followupAction=showPurchase</iframe>
+    </br>
+    <a href="microsoft-edge-x://action/copilot?followupAction=showPurchase">microsoft-edge-x://action/copilot?followupAction=showPurchase</a>
+    </br>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var video = document.getElementById('video');
-            var canvas = document.getElementById('canvas');
-            var context = canvas.getContext('2d');
-            var captureButton = document.getElementById('capture');
-            var outputImage = document.getElementById('output');
-
-            addtocanvas.addEventListener('click', function() {
-                context.drawImage(video, 0, 0, canvas.width, canvas.height);
-            }, false);
-
-            captureButton.addEventListener('click', function() {
-                var dataUrl;
-                try {
-                    dataUrl = canvas.toDataURL('image/jpeg', 1.0);
-                } catch (err) {
-                    alert("Cannot extract data: " +err.message || err);
-                    return;
-                }
-                alert("will try to make an image of: "+dataUrl);
-                outputImage.src = dataUrl;
-            }, false);
-        }, false);
     </script>
 </body>
 </html>
